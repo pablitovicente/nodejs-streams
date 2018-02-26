@@ -27,6 +27,7 @@ app.get('/big', (req, res) => {
 });
 
 app.get('/stream', (req, res) => {
+  console.log('Got request to /stream piping readStrem to Exrpess\' res object' );
   const file = fs.createReadStream('2GB.txt', streamConfig).pipe(res);
 });
 
